@@ -1,4 +1,4 @@
-* {
+/* * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -18,14 +18,14 @@ body {
     min-height: 100vh;
 }
 
-/* Dynamic Background Animation */
+
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
 
-/* Header */
+
 header {
     background: #000000;
     color: #fff;
@@ -86,7 +86,7 @@ nav .menu-icon i {
     font-size: 2rem;
 }
 
-/* Main content */
+
 main {
     flex: 1;
     padding: 20px;
@@ -112,7 +112,6 @@ main {
     color: #555;
 }
 
-/* Footer */
 footer {
     background-color: #000000;
     color: white;
@@ -120,4 +119,4 @@ footer {
     padding: 5px 0;
     width: 100%;
     margin-top: auto;
-}
+} */
