@@ -5,8 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Rahul Mishra</title>
-    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(45deg, #f3e5f5, #e8eaf6, #e0f7fa, #f1f8e9);
+            background-size: 400% 400%;
+            min-height: 100vh;
+        }
+
+        /* Dynamic Background Animation */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Header */
+        header {
+            background: #000000;
+            color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        nav .nav-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            position: relative;
+        }
+
+        nav .nav-list {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
+
+        nav .nav-list li {
+            margin: 0 15px;
+        }
+
+        nav .nav-list li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        nav .nav-list li a.active,
+        nav .nav-list li a:hover {
+            color: #f0a500;
+            box-shadow: 0 0 10px 2px rgba(240, 165, 0, 0.7);
+        }
+
+        nav .menu-icon {
+            display: none;
+            cursor: pointer;
+            position: absolute;
+            right: 1rem;
+        }
+
+        nav .menu-icon i {
+            color: white;
+            font-size: 2rem;
+        }
+
+        /* Main content */
+        main {
+            flex: 1;
+            padding: 20px;
+            margin-top: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .center-message {
+            max-width: 800px;
+        }
+
+        .center-message h1 {
+            font-size: 2.5rem;
+            color: #000;
+            margin-bottom: 1rem;
+        }
+
+        .center-message p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +141,7 @@
             <div class="nav-container">
                 <ul id="nav-list" class="nav-list">
                     <!-- <li><a href="../home/index.html">Home</a></li>
-                    <li><a href="../about/index.html">About</a></li>
+                    <li><a href="../about/index.html" class="active">About</a></li>
                     <li><a href="../projects/index.html">Projects</a></li>
                     <li><a href="../certifications/index.html">Certification</a></li>
                     <li><a href="../blogs/index.html">Blogs</a></li>
@@ -46,128 +172,3 @@
 </body>
 
 </html>
-
-/* General Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-body {
-    animation: gradientBG 15s ease infinite;
-    background: linear-gradient(45deg, #f3e5f5, #e8eaf6, #e0f7fa, #f1f8e9);
-    background-size: 400% 400%;
-    min-height: 100vh;
-}
-
-/* Dynamic Background Animation */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
-
-/* Header */
-header {
-    background: #000000;
-    color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav .nav-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    position: relative;
-}
-
-nav .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-nav .nav-list li {
-    margin: 0 15px;
-}
-
-nav .nav-list li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #fff;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-nav .nav-list li a.active,
-nav .nav-list li a:hover {
-    color: #f0a500;
-    box-shadow: 0 0 10px 2px rgba(240, 165, 0, 0.7);
-}
-
-nav .menu-icon {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    right: 1rem;
-}
-
-nav .menu-icon i {
-    color: white;
-    font-size: 2rem;
-}
-
-/* Main content */
-main {
-    flex: 1;
-    padding: 20px;
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.center-message {
-    max-width: 800px;
-}
-
-.center-message h1 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 1rem;
-}
-
-.center-message p {
-    font-size: 1.2rem;
-    color: #555;
-}
-
-/* Footer */
-footer {
-    background-color: #000000;
-    color: white;
-    text-align: center;
-    padding: 5px 0;
-    width: 100%;
-    margin-top: auto;
-}
